@@ -1,0 +1,18 @@
+Source: opencc4php
+Priority: optional
+Maintainer: Gasol Wu <gasol.wu@gmail.com>
+Build-Depends: debhelper (>= 9), dh-php5, php5-dev, libopencc-dev (>= 1.0.4)
+Standards-Version: 3.9.5
+Section: php
+Homepage: https://github.com/NauxLiu/opencc4php
+Vcs-Git: https://github.com/NauxLiu/opencc4php.git
+
+Package: php5-opencc
+Section: php
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Open Chinese Convert (OpenCC) for PHP
+ Open Chinese Convert (OpenCC, 開放中文轉換) is an opensource project for
+ conversion between Traditional Chinese and Simplified Chinese, supporting
+ character-level conversion, phrase-level conversion, variant conversion and
+ regional idioms among Mainland China, Taiwan and Hong kong.
