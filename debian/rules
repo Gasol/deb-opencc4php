@@ -1,9 +1,6 @@
 #!/usr/bin/make -f
-# See debhelper(7) (uncomment to enable)
-# output every command that modifies files on the build system.
 #DH_VERBOSE = 1
 
-# see EXAMPLES in dpkg-buildflags(1) and read /usr/share/dpkg/*
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/default.mk
 
@@ -19,13 +16,17 @@ include /usr/share/dpkg/default.mk
 
 # main packaging script based on dh7 syntax
 %:
-	dh $@ 
+	dh $@ --with php5
 
-# debmake generated override targets
-# This is example for Cmake (See http://bugs.debian.org/641051 )
-#override_dh_auto_configure:
-#	dh_auto_configure -- \
-#	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
+
+override_dh_auto_configure:
+	phpize
+	./configure
+
+override_dh_auto_test:
+	NO_INTERACTION=1 make test
+
+override_dh_auto_install:
 
 get_orig_source:
 	git clone --depth=1 https://github.com/NauxLiu/opencc4php.git
