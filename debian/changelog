@@ -1,0 +1,5 @@
+opencc4php (0.0.0~git20161110.8007639-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Gasol Wu <gasol.wu@gmail.com>  Wed, 21 Dec 2016 09:30:42 +0800
