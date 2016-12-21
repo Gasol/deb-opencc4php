@@ -27,6 +27,9 @@ include /usr/share/dpkg/default.mk
 #	dh_auto_configure -- \
 #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
-
-
-
+get_orig_source:
+	git clone --depth=1 https://github.com/NauxLiu/opencc4php.git
+	cd opencc4php && \
+		DEB_VERSION=`git log -n 1 --pretty=0.0.0~git%ad.%h --date=short | tr -d '-'` && \
+		git archive --prefix='opencc4php/' --format=tar.gz -o ../../opencc4php_$$DEB_VERSION.orig.tar.gz HEAD
+	rm -rf opencc4php
