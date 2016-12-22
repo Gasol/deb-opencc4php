@@ -4,7 +4,7 @@ DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/default.mk
 
 %:
-	dh $@ --with php5
+	dh $@ --with php
 
 override_dh_auto_configure:
 	phpize
@@ -21,3 +21,6 @@ get_orig_source:
 		DEB_VERSION=`git log -n 1 --pretty=0.0.0~git%ad.%h --date=short | tr -d '-'` && \
 		git archive --prefix='opencc4php/' --format=tar.gz -o ../../opencc4php_$$DEB_VERSION.orig.tar.gz HEAD
 	rm -rf opencc4php
+
+clean:
+	dh clean

@@ -1,13 +1,13 @@
 Source: opencc4php
 Priority: optional
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
-Build-Depends: debhelper (>= 9), dh-php5, php5-dev, libopencc-dev (>= 1.0.4)
+Build-Depends: debhelper (>= 9), dh-php, php-dev, libopencc-dev (>= 1.0.4)
 Standards-Version: 3.9.5
 Section: php
 Homepage: https://github.com/NauxLiu/opencc4php
 Vcs-Git: https://github.com/NauxLiu/opencc4php.git
 
-Package: php5-opencc
+Package: php7.0-opencc
 Section: php
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
