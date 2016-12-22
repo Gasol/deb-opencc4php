@@ -1,3 +1,9 @@
+opencc4php (0.0.0~git20161110.8007639-1bintray1~jessie) jessie; urgency=medium
+
+  * Release for Jessie
+
+ -- Gasol Wu <gasol.wu@gmail.com>  Thu, 22 Dec 2016 09:29:10 +0800
+
 opencc4php (0.0.0~git20161110.8007639-1) unstable; urgency=low
 
   * Initial release
